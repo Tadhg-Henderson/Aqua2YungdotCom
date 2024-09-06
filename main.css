@@ -1,3 +1,7 @@
+@font-face {
+    font-family: Embossed;
+    src: url(Media/font/tejaratchi.cn.ttf)
+}
 body {
     border: 0;
     padding: 0;
@@ -14,8 +18,7 @@ body p {
 }
 
 .content {
-    width: 100%;
-    max-width: 1080px;
+    width: 1080px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,11 +95,9 @@ body p {
     border:none; 
     color:transparent;
     cursor: pointer;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 3px;
-    margin-top: 3px;
-    height: 54px;
+    margin: 0;
+    padding: 0;
+    height: 53px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,6 +126,61 @@ body p {
     width: 60%;
     font-size: 22px;
 }
+.giftShop {
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-bottom: 20px;
+    color: white;
+}
+.giftShop h2 {
+    color: black;
+    font-family: Embossed;
+    font-size: 38px;
+    opacity: 80%;
+}
+.plaque {
+    background-image: url(Media/plauqe.png);
+    width: 55%;
+    height: 180px;
+    background-size: cover;
+    color: black;
+    font-family: Embossed;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.plaque p {
+    margin-top: 3%;
+    width: 78%;
+    font-size: 18px;
+    opacity: 80%;
+}
+.gallery {
+    height: 600px;
+    width: 600px;
+    margin-bottom: 110px ;
+}
+.gallery div {
+    width: 100%;
+    height: 100%;
+}
+.gallery img {
+    width: 600px;
+    height: auto;
+}
+.frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    width: 924px;
+    height: 976.5px;
+    background-image: url(Media/frame.png);
+}
+
 
 .signOff {
     display: flex;

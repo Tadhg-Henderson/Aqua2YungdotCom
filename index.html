@@ -2,6 +2,7 @@
 <head>
     <title>Aqua2Yung.com.net.gov</title>
     <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/flickity.css">
 </head>
 <!--Top of page (header)-->
 <body>
@@ -65,17 +66,41 @@
             <iframe id="VCR" width="693" height="520" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <div class="tapeSel">
-            <button onclick="ChangeVid('pZGmzf-KHn0?si=CuUgvk2kIimaG5IE')"><img src="Media/Cds/CarFreestyle(written).jpg" alt=""></button>
-            <button onclick="ChangeVid('QTLpGsnMDZI?si=Ds94GFCkrErn5b1P')"><img src="Media/Cds/CarFreestyle(written)2.jpg" alt=""></button>
-            <button onclick="ChangeVid('_lmhVAGXv6c?si=AAgIekPmVlJXrNQI')"><img src="Media/Cds/HeavenForADay.jpg" alt=""></button>
-            <button onclick="ChangeVid('WiYDbRoEzik?si=Vu9bgBfM6po2sqFt')"><img src="Media/Cds/HejiShinFreestyle.jpg" alt=""></button>
-            <button onclick="ChangeVid('Tw_I3jgK3g0?si=axXelGQypFWrvccs')"><img src="Media/Cds/IThought.jpg" alt=""></button>
-            <button onclick="ChangeVid('T-GflHuPG5Q?si=FwJ3Iwa9lqsk2Ucx')"><img src="Media/Cds/Lust.jpg" alt=""></button>
-            <button onclick="ChangeVid('XwOKP2gjXtc?si=JAXCIwksqjTxQjHw')"><img src="Media/Cds/Newport.jpg" alt=""></button>
-            <button onclick="ChangeVid('fP_t7IOR0Ds?si=UNXw70H5pCwF_z3p')"><img src="Media/Cds/PanasonicView.jpg" alt=""></button>
-            <button onclick="ChangeVid('t0BuTsxo3cA?si=7kzJl3pOI6DwDsHL')"><img src="Media/Cds/PellsLuvStory.jpg" alt=""></button>
-            <button onclick="ChangeVid('CP5GpE1Eev4?si=keJTxnkNoKBTnGse')"><img src="Media/Cds/Widow.jpg" alt=""></button>
-            <button onclick="ChangeVid('GEPrTMZ_rAE?si=uUMw_Ff3cy1w0Bmq')"><img src="Media/Cds/WishingWell.png" alt=""></button>
+            <button onclick="ChangeVid('pZGmzf-KHn0?')"><img src="Media/Cds/CarFreestyle(written).jpg" alt=""></button>
+            <button onclick="ChangeVid('QTLpGsnMDZI?')"><img src="Media/Cds/CarFreestyle(written)2.jpg" alt=""></button>
+            <button onclick="ChangeVid('_lmhVAGXv6c?')"><img src="Media/Cds/HeavenForADay.jpg" alt=""></button>
+            <button onclick="ChangeVid('WiYDbRoEzik?')"><img src="Media/Cds/HejiShinFreestyle.jpg" alt=""></button>
+            <button onclick="ChangeVid('Tw_I3jgK3g0?')"><img src="Media/Cds/IThought.jpg" alt=""></button>
+            <button onclick="ChangeVid('T-GflHuPG5Q?')"><img src="Media/Cds/Lust.jpg" alt=""></button>
+            <button onclick="ChangeVid('XwOKP2gjXtc?')"><img src="Media/Cds/Newport.jpg" alt=""></button>
+            <button onclick="ChangeVid('fP_t7IOR0Ds?')"><img src="Media/Cds/PanasonicView.jpg" alt=""></button>
+            <button onclick="ChangeVid('t0BuTsxo3cA?')"><img src="Media/Cds/PellsLuvStory.jpg" alt=""></button>
+            <button onclick="ChangeVid('CP5GpE1Eev4?')"><img src="Media/Cds/Widow.jpg" alt=""></button>
+            <button onclick="ChangeVid('GEPrTMZ_rAE?')"><img src="Media/Cds/WishingWell.png" alt=""></button>
+        </div>
+        <div class="giftShop">
+            <div class="frame">
+                <h2 id="title">Title</h2>
+                <div class="gallery">
+                    <div>
+                        <a href="https://aqua2yung.bandcamp.com/album/rapture-ready"><img src="Media/ShopIMGs/RaptureReady.jpg" alt=""></a>
+                    </div>
+                    <div>
+                        <a href="https://aqua2yung.bandcamp.com/track/a-pells-luv-story-anniversary-edition"><img src="Media/ShopIMGs/aPellsLoveStory.jpg" alt=""></a>
+                    </div>
+                    <div>
+                        <a href="https://aqua2yung.bandcamp.com/track/heji-shin-freestyle-prod-beatdaddyx"><img src="Media/ShopIMGs/CarFreestyle.jpg" alt=""></a>
+                    </div>
+                    <div>
+                        <a href="https://aqua2yung.bandcamp.com/track/car-freestyle-written"><img src="Media/ShopIMGs/HejiShin.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="plaque">
+                <p id="plaque">
+                    hello
+                </p>
+            </div>
         </div>
         <hr style="color: rgba(255, 255, 255, 0.623); width: 95%">
         <div class="signOff">
@@ -85,11 +110,42 @@
             <p>Web Devolper, Father?, lifelong fan.</p>
         </div>
     </div>
-   
+    <script src="/flickity.pkgd.min.js"></script>
+    <script>
+        const plaque = document.getElementById('plaque');
+        const title = document.getElementById('title');
+
+        var flck = new Flickity ('.gallery', {
+            cellAlign: 'left',
+            contain: true,
+            pageDots:false,
+            wrapAround: true,
+            on:{change:ReReview},
+        });
+        function ReReview() {
+            if (flck.selectedIndex == 0) {
+                title.innerText = "Rapture Ready"
+                plaque.innerText = "Three years in the making, a true masterpiece of hip hop literature, I remember the premiere night as if it was the birth of my 2nd daughter. the witty comments shared, prosecco passed around, a clearly drunk AQUA2YUNG sobbing quietly... ART. The only way he could top this one is if- well its impossible! unless he holds another live show let's say and mmm all the instrumentals played with a full band again! till then the bandcamp WAVs will do!"
+            }else if (flck.selectedIndex == 1){
+                console.log('godoc')
+                title.innerText = "A Pells love story"
+                plaque.innerText = "AAAHH i remember being in my early fourtys taking the love of my life, now ex wife to the Maldives.  We ate oysters out of a bald man's belly button and drank chardonnay mixed with salt water. We made passionate mookie upon the sand whilst this song was playing, everytime i listen to it the ocean ambience plays in my head again."
+            }else if (flck.selectedIndex == 2) {
+                plaque.innerText = "OoOoo a elastic boom bapstic spin of a classic! A car freestyle but written? Who but the mind of underground Naarm sensation AQUA2YUNG would have conceived such an 'ill' concept. I remember being in my Mercedes bumpin this tune on the way to a winery opening and all my accolades starting shazaming simultaneously ! haha."
+                console.log('godoc')
+                title.innerText = "Car Freestyle"
+            }else if (flck.selectedIndex == 3) {
+                console.log('godoc')
+                plaque.innerText = "Mmmm I remember being on my fifth trip to Ecuador when I fell in love with a 3 eyed man who didn't speak English, he would take me for mountain hikes where I would feel the touch of another. Alone on the peak he whispered in my ear 'this whole situation is messy' i shivered as my hand recoiled in nervousness, he grabbed my wandering hand. 'Name a Naarm rapper that could ever ever best me' I whimpered, as we made love. I have never seen that man nor got his name, truly an anthem of nations."
+                title.innerText =  "Heji Shin Freestyle"
+            }
+            console.log('Changed')
+        }
+        ReReview();
+
+        function ChangeVid(URL) {
+            document.getElementById('VCR').src = "https://www.youtube.com/embed/" + URL + "&autoplay=1";
+            document.getElementById('VCR').scrollIntoView();
+        }
+    </script>
 </body>
-<script>
-    function ChangeVid(URL) {
-        document.getElementById('VCR').src = "https://www.youtube.com/embed/" + URL + "&autoplay=1";
-        document.getElementById('VCR').scrollIntoView();
-    }
-</script>
