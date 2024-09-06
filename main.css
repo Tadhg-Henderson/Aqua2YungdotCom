@@ -1,0 +1,151 @@
+body {
+    border: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    overflow-x:hidden
+}
+body p {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.content {
+    width: 100%;
+    max-width: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* header content */
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.header pre {
+    text-align: left;
+    color: rgb(255, 255, 255);
+}
+.header p {
+    color: rgba(255, 255, 255, 0.308);
+    text-align: center;
+    font-size: 12px;
+    width: 80%;
+}
+.linkBar p{
+    color: white;
+    font-size: 20px;  
+    width: 100%;
+}
+
+/*TV*/
+.televisionCont{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 900px;
+    padding-bottom: 16px;
+}
+.vcr{
+    height: 900px;
+    width: auto;
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.static{
+    width: 593px;
+    z-index: 0;
+    width: auto;
+    position: absolute;
+    pointer-events: none;
+    padding-top: 87px;
+}
+.televisionCont iframe {
+    padding-top: 87px;
+    z-index: 1;
+
+}
+.tapeSel {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    border: 0;
+}
+.tapeSel img {
+    width: 98%;
+}
+.tapeSel button {
+    width: 50%;
+    background:transparent;
+    border:none; 
+    color:transparent;
+    cursor: pointer;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tapeSel img:hover {
+    width: 100%;
+    z-index: 1;
+}
+
+.welcomeMat {
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    width: 90%;
+    margin-bottom: 30px;
+}
+.welcomeMat div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.welcomeMat img {
+    width: 40%;
+}
+.welcomeMat div p {
+    width: 60%;
+    font-size: 22px;
+}
+
+.signOff {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+.signOff img {
+    width: 382px;
+    height: auto;
+
+}
+.signOff h1 {
+    color: white;
+    margin: 0;
+}
+.signOff h2 {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+.signOff p {
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+}
