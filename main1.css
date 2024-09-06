@@ -39,7 +39,7 @@ body p {
 .header p {
     color: rgba(255, 255, 255, 0.308);
     text-align: center;
-    font-size: 12px;
+    font-size: small;
     width: 80%;
 }
 .linkBar p{
@@ -121,6 +121,7 @@ body p {
 }
 .welcomeMat img {
     width: 40%;
+    height: auto;
 }
 .welcomeMat div p {
     width: 60%;
@@ -142,7 +143,7 @@ body p {
 }
 .plaque {
     background-image: url(Media/plauqe.png);
-    width: 55%;
+    width: 594px;
     height: 180px;
     background-size: cover;
     color: black;
@@ -160,7 +161,7 @@ body p {
 .gallery {
     height: 600px;
     width: 600px;
-    margin-bottom: 110px ;
+    margin-bottom: 110px;
 }
 .gallery div {
     width: 100%;
