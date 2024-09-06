@@ -39,7 +39,7 @@ body p {
 .header p {
     color: rgba(255, 255, 255, 0.308);
     text-align: center;
-    font-size: small;
+    font-size: 12px;  
     width: 80%;
 }
 .linkBar p{
@@ -120,8 +120,8 @@ body p {
     width: 100%;
 }
 .welcomeMat img {
-    width: 40%;
-    height: auto;
+    width: 388px;
+    height: 250px;
 }
 .welcomeMat div p {
     width: 60%;
