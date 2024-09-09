@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <title>Aqua2Yung.com.net.gov</title>
-    <link rel="stylesheet" href="/main4.css">
+    <link rel="stylesheet" href="/main8.css">
     <link rel="stylesheet" href="/flickity.css">
     <link rel="icon" type="image/icon" href="Media/Icon.ico"/>
 </head>
@@ -52,6 +52,7 @@
             <button onclick="ChangeVid('pZGmzf-KHn0?')"><img src="Media/Cds/CarFreestyle(written).jpg" alt=""></button>
             <button onclick="ChangeVid('QTLpGsnMDZI?')"><img src="Media/Cds/CarFreestyle(written)2.jpg" alt=""></button>
             <button onclick="ChangeVid('_lmhVAGXv6c?')"><img src="Media/Cds/HeavenForADay.jpg" alt=""></button>
+            <button onclick="ChangeVid('jNvIiGj9_OI?')"><img src="Media/Cds/movie.png" alt=""></button>
             <button onclick="ChangeVid('WiYDbRoEzik?')"><img src="Media/Cds/HejiShinFreestyle.jpg" alt=""></button>
             <button onclick="ChangeVid('Tw_I3jgK3g0?')"><img src="Media/Cds/IThought.jpg" alt=""></button>
             <button onclick="ChangeVid('T-GflHuPG5Q?')"><img src="Media/Cds/Lust.jpg" alt=""></button>
@@ -61,6 +62,7 @@
             <button onclick="ChangeVid('CP5GpE1Eev4?')"><img src="Media/Cds/Widow.jpg" alt=""></button>
             <button onclick="ChangeVid('GEPrTMZ_rAE?')"><img src="Media/Cds/WishingWell.png" alt=""></button>
         </div>
+        <audio src="Media/Audio/VCR-IN.mp3" id="VCRIN"></audio>
         <div class="welcomeMat">
             <h1 style="text-align: center;"> Who is Aqua2Yung?</h1>
             <div>
@@ -68,7 +70,6 @@
                     Aqua2yung is a breath of fresh air in the hip-hop scene. The MC, stallion, poet, and producer made his first song when he was 
                     only thirteen, and by the time he was sixteen, he was in the studio daily developing his craft. Aqua2Yung boasts a whole kaleidoscope
                     of poetry and rhythm, containing a combination of Jazz, Funk, and Hip-Hop. 
-                   
                 </p>
                 <img src="Media/PenLicence.png" alt="" style="height: 231.7px;">
             </div>
@@ -117,7 +118,13 @@
     <script>
         const plaque = document.getElementById('plaque');
         const title = document.getElementById('title');
-
+        PreLoad();
+        
+        function PreLoad() {
+            document.getElementById('VCRIN').preload;
+            document.getElementById('VCRIN').volume = 0.2;
+            console.log('Preload ran')
+        }
         var flck = new Flickity ('.gallery', {
             cellAlign: 'left',
             contain: true,
@@ -147,8 +154,9 @@
         ReReview();
 
         function ChangeVid(URL) {
+            document.getElementById('VCRIN').load();
             document.getElementById('VCR').src = "https://www.youtube.com/embed/" + URL + "&autoplay=1";
-            document.getElementById('VCR').scrollIntoView();
+            document.getElementById('VCRIN').play();
         }
     </script>
 </body>

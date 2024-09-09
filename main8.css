@@ -2,6 +2,10 @@
     font-family: Embossed;
     src: url(Media/font/tejaratchi.cn.ttf)
 }
+@font-face {
+    font-family: Cursively;
+    src: url(Media/font/artecallya.script.ttf);
+}
 body {
     border: 0;
     padding: 0;
@@ -35,6 +39,7 @@ body p {
 .header pre {
     text-align: left;
     animation: rgb 10s linear infinite;
+    font-size: 15px;
 }
 @keyframes rgb {
     0% {color: red;}
@@ -45,7 +50,7 @@ body p {
 .header p {
     color: rgba(255, 255, 255, 0.308);
     text-align: center;
-    font-size: 14px;  
+    font-size: 80%;  
     width: 80%;
 }
 
@@ -105,7 +110,7 @@ body p {
     cursor: pointer;
     margin: 0;
     padding: 0;
-    height: 53px;
+    height: 54px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,7 +146,7 @@ body p {
     align-items: center;
     margin-bottom: 20px;
     color: white;
-    padding-bottom: 150px;
+    padding-bottom: 200px;
 }
 .giftShop h2 {
     color: black;
@@ -151,8 +156,8 @@ body p {
 }
 .plaque {
     background-image: url(Media/Napkin.png);
-    margin-top: 600px;
-    margin-left: 500px;
+    margin-top: 650px;
+    margin-left: 400px;
     width: 574px;
     height: 524px;
     background-size: cover;
@@ -170,9 +175,9 @@ body p {
     align-items: center;
     width: 60%;
     height: 340px;
-    margin-left: 10px;
-    font-family: cursive;
-    font-size: 18px;
+    margin-left: 20px;
+    font-family: Cursively;
+    font-size: 22px;
     pointer-events: none;
 }
 .gallery {
@@ -198,7 +203,6 @@ body p {
     height: 976.5px;
     background-image: url(Media/frame.png);
 }
-
 
 .signOff {
     display: flex;
