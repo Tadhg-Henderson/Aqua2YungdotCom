@@ -4,7 +4,7 @@
 }
 @font-face {
     font-family: Cursively;
-    src: url(Media/font/artecallya.script.ttf);
+    src: url(Media/font/Sierra\ Nevada\ Road.ttf);
 }
 body {
     border: 0;
@@ -177,7 +177,7 @@ body p {
     height: 340px;
     margin-left: 20px;
     font-family: Cursively;
-    font-size: 22px;
+    font-size: 26px;
     pointer-events: none;
 }
 .gallery {
